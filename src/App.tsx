@@ -43,6 +43,21 @@ const App: React.FC = () => (
         <Route exact path="/login">
           <Login />
         </Route>
+        <Route exact path="/abrar">
+          {/* ini nama page mu abrar */}
+        </Route>
+        <Route exact path="/lala">
+          {/* ini nama page mu lala */}
+        </Route>
+        <Route exact path="/rency">
+          {/* ini nama page mu rency */}
+        </Route>
+        <Route exact path="/wahyu">
+          {/* ini nama page mu wahyu */}
+        </Route>
+        <Route exact path="/ali">
+          {/* ini nama page mu ali */}
+        </Route>
         <Route exact path="/register">
           <Register />
         </Route>
