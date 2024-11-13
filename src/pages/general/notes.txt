@@ -1,0 +1,1 @@
+ini page untuk page-page yang bisa diakses sama ordinary user dan owner user

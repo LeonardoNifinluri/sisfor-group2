@@ -44,19 +44,22 @@ const App: React.FC = () => (
           <Login />
         </Route>
         <Route exact path="/abrar">
-          {/* ini nama page mu abrar */}
+          {/* isi dengan nama page mu abrar */}
         </Route>
         <Route exact path="/lala">
-          {/* ini nama page mu lala */}
+          {/* isi dengan nama page mu lala */}
         </Route>
         <Route exact path="/rency">
-          {/* ini nama page mu rency */}
+          {/* isi dengan nama page mu rency */}
         </Route>
         <Route exact path="/wahyu">
-          {/* ini nama page mu wahyu */}
+          {/* isi dengan nama page mu wahyu */}
         </Route>
         <Route exact path="/ali">
-          {/* ini nama page mu ali */}
+          {/* isi dengan nama page mu ali */}
+        </Route>
+        <Route exact path="/leo">
+          {/* isi dengan nama page mu ali */}
         </Route>
         <Route exact path="/register">
           <Register />
