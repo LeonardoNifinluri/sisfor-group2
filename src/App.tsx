@@ -17,6 +17,7 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+import DashboardOwner from './pages/owner-user/DashboardOwner';
 
 /**
  * Ionic Dark Mode
@@ -54,6 +55,7 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/wahyu">
           {/* isi dengan nama page mu wahyu */}
+          <DashboardOwner></DashboardOwner>
         </Route>
         <Route exact path="/ali">
           {/* isi dengan nama page mu ali */}
