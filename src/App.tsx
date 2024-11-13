@@ -1,6 +1,8 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import  Login  from './pages/auth/Login';
+import Register  from './pages/auth/Register';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -31,8 +33,8 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Login from './pages/auth/Login';
-import Register from './pages/auth/Register';
+// import Login from './pages/auth/Login';
+// import Register from './pages/auth/Register';
 
 setupIonicReact();
 
@@ -44,7 +46,7 @@ const App: React.FC = () => (
           <Login />
         </Route>
         <Route exact path="/abrar">
-          {/* isi dengan nama page mu abrar */}
+          {/* isi dengan nama page mu abrar */  }
         </Route>
         <Route exact path="/lala">
           {/* isi dengan nama page mu lala */}
