@@ -1,18 +1,25 @@
 import { IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonButton, IonInput, IonItem, IonLabel } from "@ionic/react";
 import "./Login.css"; // Include custom CSS for styling
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Login: React.FC = () => {
+
+    const [email, setEmail] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
+    const history = useHistory()
+
     return (
         <IonPage>
             <IonHeader>
                 <IonToolbar color="dark">
                     <IonTitle>KoKoS</IonTitle>
-                    <IonButtons slot="end">
+                    {/* <IonButtons slot="end">
                         <IonButton routerLink="/home">Beranda</IonButton>
                         <IonButton routerLink="/help">Bantuan</IonButton>
                         <IonButton routerLink="/policy">Kebijakan</IonButton>
                         <IonButton routerLink="/contact">Hubungi Kami</IonButton>
-                    </IonButtons>
+                    </IonButtons> */}
                 </IonToolbar>
             </IonHeader>
 
@@ -31,7 +38,7 @@ const Login: React.FC = () => {
                 </div>
             </IonContent>
 
-            <IonFooter>
+            {/* <IonFooter>
                 <IonToolbar color="medium">
                     <div className="footer-content">
                         <div className="footer-section">
@@ -53,7 +60,7 @@ const Login: React.FC = () => {
                         </div>
                     </div>
                 </IonToolbar>
-            </IonFooter>
+            </IonFooter> */}
         </IonPage>
     );
 };
