@@ -1,0 +1,7 @@
+{
+  "name": "sisfor-group2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
