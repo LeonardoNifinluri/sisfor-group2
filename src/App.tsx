@@ -33,6 +33,7 @@ import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
+import AddBoardingHouse from './pages/owner-user/AddBoardingHouse';
 
 setupIonicReact();
 
@@ -57,6 +58,7 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/ali">
           {/* isi dengan nama page mu ali */}
+          <AddBoardingHouse />
         </Route>
         <Route exact path="/leo">
           {/* isi dengan nama page mu ali */}
