@@ -2,12 +2,32 @@ import { IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar, IonBut
 import "./Login.css"; // Include custom CSS for styling
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { fetchUserData } from "../../services/firebaseDatabase";
+import { loginUser } from "../../services/firebaseAuth";
 
 const Login: React.FC = () => {
 
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const history = useHistory()
+
+    //this is the logic when login button is clicked
+  const handleLogin = async () => {
+    //this is to check the data
+    console.log(`Email\t: ${email}\nPassword\t: ${password}`)
+    //this is the auth process
+    const userCredential = await loginUser(email, password)
+    if(userCredential){
+      const uid = userCredential.user.uid
+      console.log('Login successfully ', uid)
+      const userData = await fetchUserData(uid)
+      if(userData?.role){
+        const role = userData.role as unknown as string
+        const route = (role === "OWNER") ? `/home/OWNER/${uid}` : `/home/ORDINARY/${uid}` 
+        history.push(route)
+      }
+    }
+  }
 
     return (
         <IonPage>
@@ -27,13 +47,15 @@ const Login: React.FC = () => {
                 <div className="login-container">
                     <h2>Login</h2>
                     <IonItem>
-                        <IonInput placeholder="Username"></IonInput>
+                        <IonInput placeholder="Email" value={email}
+            onIonChange={(it) => setEmail(it.detail.value || '')}/>
                     </IonItem>
                     <IonItem>
-                        <IonInput type="password" placeholder="Password"></IonInput>
+                        <IonInput type="password" placeholder="Password" value={password}
+            onIonChange={(it) => setPassword(it.detail.value || '')}/>
                     </IonItem>
                     <p className="forgot-password">Lupa password ??</p>
-                    <IonButton expand="full" color="dark">Login</IonButton>
+                    <IonButton expand="full" color="dark" onClick={handleLogin}>Login</IonButton>
                     <p className="register-link">Belum punya akun? <a href="/register">Daftar Sekarang</a></p>
                 </div>
             </IonContent>

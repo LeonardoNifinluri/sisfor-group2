@@ -2,6 +2,9 @@ import { IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar, IonInp
 import "./Register.css";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { UserRole } from "../../types/UserRole";
+import { registerUser } from "../../services/firebaseAuth";
+import { saveUserData } from "../../services/firebaseDatabase";
 
 const Register: React.FC = () => {
 
@@ -9,8 +12,24 @@ const Register: React.FC = () => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [phoneNumber, setPhoneNumber] = useState<string>('')
-    // const [role, setRole] = useState<Role>(Role.C)
+    const [role, setRole] = useState<UserRole>(UserRole.UNKNOWN)
     const history = useHistory()
+
+    //this is the logic when login button is clicked
+    const handleRegister = async () => {
+        //this is for check the data
+        console.log(`Name\t: ${name}\nEmail\t: ${email}\nPassword\t: ${password}\nPhone number\t: ${phoneNumber}\nRole\t: ${UserRole[role]}`)
+
+        //this is the auth process  
+        const userCredential = await registerUser(email, password)
+        if(userCredential){
+            const uid = userCredential.user.uid
+            console.log('User created successfully ', uid)
+            await saveUserData(uid, name, email, role)
+
+            history.goBack()
+        }
+    }
 
     return (
         <IonPage>
@@ -24,26 +43,26 @@ const Register: React.FC = () => {
                 <div className="register-container">
                     <h2>Register</h2>
                     <IonItem>
-                        <IonInput placeholder="Username"></IonInput>
+                        <IonInput placeholder="Name" value={name} onIonChange={(it) => setName(it.detail.value|| '')} />
                     </IonItem>
                     <IonItem>
-                        <IonInput type="email" placeholder="Email"></IonInput>
+                        <IonInput type="email" placeholder="Email" value={email} onIonChange={(it) => setEmail(it.detail.value|| '')} />
                     </IonItem>
                     <IonItem>
-                        <IonInput type="password" placeholder="Password"></IonInput>
+                        <IonInput type="password" placeholder="Password" value={password} onIonChange={(it) => setPassword(it.detail.value|| '')} />
                     </IonItem>
                     <IonItem>
-                        <IonInput type="number" placeholder="Phone number"></IonInput>
+                        <IonInput type="number" placeholder="Phone number" value={phoneNumber} onIonChange={(it) => setPhoneNumber(it.detail.value|| '')} />
                     </IonItem>
                     <IonRadioGroup 
-                    value={5}
-                    onIonChange={(it) => {console.log()}}>
-                        <IonRadio value={4}>Owner</IonRadio>
+                    value={role}
+                    onIonChange={(it) => setRole(it.detail.value as UserRole)}>
+                        <IonRadio value={UserRole.OWNER}>Owner</IonRadio>
                         <br/>
-                        <IonRadio value={4}>Ordinary</IonRadio>
+                        <IonRadio value={UserRole.ORDINARY}>Ordinary</IonRadio>
                         <br/>
                     </IonRadioGroup>
-                    <IonButton expand="block" color="dark">Daftar</IonButton>
+                    <IonButton expand="block" color="dark" onClick={handleRegister}>Daftar</IonButton>
                 </div>
             </IonContent>
 

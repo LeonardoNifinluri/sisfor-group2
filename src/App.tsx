@@ -45,9 +45,6 @@ const App: React.FC = () => (
         <Route exact path="/login">
           <Login />
         </Route>
-        <Route exact path="/abrar">
-          {/* isi dengan nama page mu abrar */  }
-        </Route>
         <Route exact path="/lala">
           {/* isi dengan nama page mu lala */}
         </Route>
@@ -61,7 +58,12 @@ const App: React.FC = () => (
           {/* isi dengan nama page mu ali */}
         </Route>
         <Route exact path="/leo">
-          {/* isi dengan nama page mu ali */}
+        </Route>
+        <Route exact path="/home/OWNER/:userId">
+          <Login />
+        </Route>
+        <Route exact path="/home/ORDINARY/:userId">
+          <Register />
         </Route>
         <Route exact path="/register">
           <Register />

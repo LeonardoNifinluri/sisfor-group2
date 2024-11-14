@@ -1,4 +1,5 @@
 export enum UserRole{
     ORDINARY,
-    OWNER
+    OWNER,
+    UNKNOWN
 }
