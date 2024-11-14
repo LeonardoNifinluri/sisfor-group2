@@ -1,0 +1,97 @@
+/* Navbar styling */
+.custom-navbar {
+    background-color: #5C3537; /* Warna coklat untuk navbar */
+}
+
+.navbar-title {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Konten register, memastikan berada di tengah dan memiliki padding */
+.register-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF; /* Background putih untuk konten */
+    min-height: 80vh; /* Mengisi 80% dari tinggi viewport */
+}
+
+/* Container untuk form registrasi */
+.register-container {
+    background-color: #D9D9D966; /* Background abu muda untuk container */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow untuk efek card */
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Judul form */
+.register-container h2 {
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Input styling */
+.register-container ion-item {
+    --background: transparent; /* Latar belakang input transparan */
+    --border-color: #C0C0C0; /* Warna garis bawah item */
+    --highlight-color-focused: #5C3537; /* Warna fokus coklat */
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    padding-left: 10px;
+}
+
+.register-container ion-input {
+    color: #333333; /* Warna teks input */
+    padding: 8px;
+}
+
+/* Tombol daftar */
+.register-container ion-button {
+    --background: #5C3537; /* Warna tombol coklat */
+    --background-activated: #3E2424; /* Warna saat ditekan */
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow untuk tombol */
+}
+
+/* Footer styling */
+.footer-text {
+    text-align: center;
+    color: gray;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.footer-text a {
+    color: #5C3537; /* Warna tautan */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Footer styling - bagian bawah halaman */
+.ion-footer {
+    background-color: #AE9A9B; /* Warna footer coklat muda */
+}
+
+.footer-text {
+    color: #333333; /* Warna teks footer */
+}
+
+.footer-text a {
+    color: #5C3537; /* Warna link di footer */
+}

@@ -1,0 +1,118 @@
+/* Body Styling */
+body {
+    background-color: #FFFFFF !important;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Navbar Styling */
+  .custom-navbar {
+    background-color: #5C3537;
+  }
+
+  .navbar-title {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .navbar-link {
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+
+  /* Login Content Styling */
+  .login-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Memastikan konten memenuhi tinggi viewport */
+    background-color: #FFFFFF;
+    padding: 0; /* Menghilangkan padding untuk memastikan posisi tengah */
+    box-sizing: border-box;
+  }
+
+  /* Login Container Styling */
+  .login-container {
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  /* Judul Form Login */
+  .login-container h2 {
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+
+  /* Input Styling */
+  .login-container ion-item {
+    --background: transparent;
+    --border-color: #C0C0C0;
+    --highlight-color-focused: #5C3537;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    padding-left: 10px;
+  }
+
+  .login-container ion-input {
+    color: #333333;
+    padding: 8px;
+  }
+
+  /* Tombol Login */
+  .login-container ion-button {
+    --background: #5C3537;
+    --background-activated: #3E2424;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Forgot Password and Register Link */
+  .forgot-password, .register-link {
+    color: gray;
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+
+  .forgot-password:hover, .register-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer Styling */
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 20px 0;
+    background-color: #AE9A9B;
+  }
+
+  .footer-section h5 {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #333333;
+  }
+
+  .footer-section a {
+    color: #5C3537;
+    text-decoration: none;
+  }
+
+  .footer-section a:hover {
+    text-decoration: underline;
+  }

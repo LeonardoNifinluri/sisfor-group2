@@ -1,6 +1,8 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import  Login  from './pages/auth/Login';
+import Register  from './pages/auth/Register';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -17,6 +19,7 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+import DashboardOwner from './pages/owner-user/DashboardOwner';
 
 /**
  * Ionic Dark Mode
@@ -31,8 +34,9 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import Login from './pages/auth/Login';
-import Register from './pages/auth/Register';
+// import Login from './pages/auth/Login';
+// import Register from './pages/auth/Register';
+import AddBoardingHouse from './pages/owner-user/AddBoardingHouse';
 
 setupIonicReact();
 
@@ -43,9 +47,6 @@ const App: React.FC = () => (
         <Route exact path="/login">
           <Login />
         </Route>
-        <Route exact path="/abrar">
-          {/* isi dengan nama page mu abrar */}
-        </Route>
         <Route exact path="/lala">
           {/* isi dengan nama page mu lala */}
         </Route>
@@ -54,12 +55,19 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/wahyu">
           {/* isi dengan nama page mu wahyu */}
+          <DashboardOwner></DashboardOwner>
         </Route>
         <Route exact path="/ali">
           {/* isi dengan nama page mu ali */}
+          <AddBoardingHouse />
         </Route>
         <Route exact path="/leo">
-          {/* isi dengan nama page mu ali */}
+        </Route>
+        <Route exact path="/home/OWNER/:userId">
+          <Login />
+        </Route>
+        <Route exact path="/home/ORDINARY/:userId">
+          <Register />
         </Route>
         <Route exact path="/register">
           <Register />
