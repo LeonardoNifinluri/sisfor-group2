@@ -1,0 +1,229 @@
+/* Container and General Layout */
+.informasi-content {
+  padding: 136px;
+}
+
+.kost-detail, .kost-price, .specification-section, .additional-info, .related-kost-section {
+  margin-bottom: 24px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.kost-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* Kost Preview and Price Section */
+.kost-preview-container {
+  text-align: center;
+}
+
+.kost-preview {
+  width: 590px;
+  height: 500px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.kost-preview-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  padding: 0;
+}
+
+.kost-preview1 {
+  width: 505px;
+  height: 243px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.kost-preview2 {
+  width: 505px;
+  height: 242px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.kost-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.alamat {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.Tombol-Hubungi {
+    width: 257px;
+    height: 37px;
+}
+
+/* Specifications Section */
+.specification-section {
+  margin-top: 32px;
+  font-size: 18px;
+  color: #333;
+}
+
+.specification-line {
+  width: 700px;       /* Panjang garis */
+  border: none;       /* Menghilangkan border default */
+  border-top: 2px solid #333; /* Mengatur ketebalan dan warna garis */
+  margin: 5px 0;     /* Memberi jarak atas dan bawah */
+}
+
+.specification-section .specification-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.specification-section .specification-item svg {
+  margin-right: 8px;
+}
+
+/* Facilities Section */
+.facilities-section {
+  margin-right: 100px;
+  margin-left: 100px;
+  font-size: 18px;
+  color: #333;
+}
+
+.facility-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.facility-icons .facility-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.facility-icons .facility-item svg {
+  margin-right: 8px;
+}
+
+/* Additional Information Section */
+.additional-info {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Related Kost Section */
+.related-kost-section {
+  margin-top: 32px;
+}
+
+.related-kost-cards {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.kost-card {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.kost-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.kost-card .kost-card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.kost-card .kost-card-price {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Footer Section */
+.footer-section {
+  padding: 136px; /* Increased padding by 120px */
+  background-color: #ae949b;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links div {
+  margin: 0 16px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Button Styles */
+.contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.contact-button:hover {
+  background-color: #555;
+}
+
+/* Map Section */
+.map-section {
+  margin-top: 32px;
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
