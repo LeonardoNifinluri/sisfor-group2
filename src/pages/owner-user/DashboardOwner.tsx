@@ -75,7 +75,8 @@ const DashboardOwner: React.FC = () => {
                 ))}
 
                 <IonFab vertical="bottom" horizontal="end" slot="fixed">
-                    <IonFabButton routerLink="/AddKost">
+                    {/* this button will navigate owner user to add bording house form */}
+                    <IonFabButton routerLink="/ali">
                         <IonIcon icon={add} />
                     </IonFabButton>
                 </IonFab>

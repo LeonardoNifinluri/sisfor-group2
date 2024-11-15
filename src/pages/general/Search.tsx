@@ -93,7 +93,8 @@ const Search: React.FC = () => {
 
           {filteredKostData.length > 0 ? (
             filteredKostData.map((kost) => (
-              <IonCard key={kost.id} className="kost-card">
+              // everytime ordinary user click the result, they navigate to Information page
+              <IonCard key={kost.id} className="kost-card" routerLink="/rency">
                 <IonCardContent className="kost-content">
                   <IonImg 
                     src={kost.thumbnail} 

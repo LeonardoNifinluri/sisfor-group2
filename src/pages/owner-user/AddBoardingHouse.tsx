@@ -122,7 +122,8 @@ const AddBoardingHouse: React.FC = () => {
 
                 {/* Button Tambah */}
                 <div className="ion-padding">
-                    <IonButton expand="block" style={{ "--background": "#AE9A9B", color: 'black', borderRadius: '10px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', fontWeight: 'bold'}}>
+                    {/* this button will navigate owner-user to dashboard page */}
+                    <IonButton expand="block" style={{ "--background": "#AE9A9B", color: 'black', borderRadius: '10px', boxShadow: '0 4px 4px rgba(0, 0, 0, 0.1)', fontWeight: 'bold'}} routerLink="/wahyu">
                         Tambah
                     </IonButton>
                 </div>

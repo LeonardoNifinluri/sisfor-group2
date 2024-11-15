@@ -9,9 +9,9 @@ import {
   IonImg,
   IonText,
 } from "@ionic/react";
-import "./Informasi.css";
+import "./Information.css";
 
-const Informasi: React.FC = () => {
+const Information: React.FC = () => {
   // URL gambar 
   const imageURL1 =
     "https://i.pinimg.com/736x/f9/2f/cc/f92fcc93ae73ca439986199378c73b4a.jpg"; 
@@ -171,4 +171,4 @@ const Informasi: React.FC = () => {
   );
 };
 
-export default Informasi;
+export default Information;

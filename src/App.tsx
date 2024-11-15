@@ -38,6 +38,8 @@ import AddBoardingHouse from './pages/owner-user/AddBoardingHouse';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import Search from './pages/general/Search';
+import Information from './pages/general/Information';
+import DashboardOrdinary from './pages/ordinary-user/DashboardOrdinary';
 
 setupIonicReact();
 
@@ -48,14 +50,14 @@ const App: React.FC = () => (
         <Route exact path="/login">
           <Login />
         </Route>
-        <Route exact path="/abrar">
-          {/* isi dengan nama page mu abrar */}
+        <Route exact path="/">
+          <Redirect to="/login" />
         </Route>
         <Route exact path="/lala">
-          {/* isi dengan nama page mu lala */}
+          <Search/>
         </Route>
         <Route exact path="/rency">
-          {/* isi dengan nama page mu rency */}
+          <Information />
         </Route>
         <Route exact path="/wahyu">
           {/* isi dengan nama page mu wahyu */}
@@ -65,24 +67,17 @@ const App: React.FC = () => (
           {/* isi dengan nama page mu ali */}
           <AddBoardingHouse />
         </Route>
-        <Route exact path="/leo">
-        </Route>
         <Route exact path="/home/OWNER/:userId">
-          <Login />
+          {/* ini OWNER dashboard */}
+          <DashboardOwner />
         </Route>
         <Route exact path="/home/ORDINARY/:userId">
-          <Register />
+          {/* ini ordinary dashboard */}
+          <DashboardOrdinary />
         </Route>
         <Route exact path="/register">
           <Register />
         </Route>
-        <Route exact path="/">
-          <Redirect to="/login" />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/Search" />
-        </Route>
-
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
