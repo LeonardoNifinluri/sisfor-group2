@@ -1,8 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import  Login  from './pages/auth/Login';
-import Register  from './pages/auth/Register';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -37,6 +35,9 @@ import './theme/variables.css';
 // import Login from './pages/auth/Login';
 // import Register from './pages/auth/Register';
 import AddBoardingHouse from './pages/owner-user/AddBoardingHouse';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import Search from './pages/general/Search';
 
 setupIonicReact();
 
@@ -46,6 +47,9 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/abrar">
+          {/* isi dengan nama page mu abrar */}
         </Route>
         <Route exact path="/lala">
           {/* isi dengan nama page mu lala */}
@@ -75,6 +79,10 @@ const App: React.FC = () => (
         <Route exact path="/">
           <Redirect to="/login" />
         </Route>
+        <Route exact path="/">
+          <Redirect to="/Search" />
+        </Route>
+
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
